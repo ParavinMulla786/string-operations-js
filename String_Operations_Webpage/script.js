@@ -65,3 +65,38 @@ function checkPalindrome() {
         document.getElementById("result").textContent = "Not Palindrome";
     }
 }
+
+
+function countNewLines() {
+    let str = document.getElementById("inputpara").value;
+    let count = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === "\n") {
+            count++;
+        }
+    }
+
+    document.getElementById("result").textContent = "New Lines: " + count;
+}
+
+
+
+function titleCase() {
+    let str = document.getElementById("inputpara").value;
+
+    let words = str.toLowerCase().split(" ");
+    let result = "";
+
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+
+        if (word.length > 0) {
+            result += word.charAt(0).toUpperCase() + word.slice(1);
+        }
+
+        result += " ";
+    }
+
+    document.getElementById("result").textContent = result.trim();
+}
