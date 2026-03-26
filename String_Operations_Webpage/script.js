@@ -1,3 +1,4 @@
+
 function countvowels() {
     let str = document.getElementById("inputpara").value;
     let vowels = "aeiouAEIOU";
